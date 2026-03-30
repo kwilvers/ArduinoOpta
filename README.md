@@ -9,7 +9,7 @@ Ce dépôt regroupe des projets d’automatisation pour **Arduino Opta**, combin
 
 ## Structure principale
 
-- **R2D1/**, **R2D4/**, **R2D5/** : variantes du projet (versions/équipements différents).
+- **R2D1/**, **R2D3/**, **R2D4/**, **R2D5/** : variantes du projet (versions/équipements différents).
 - **Build/** : artefacts de compilation PLC.
 - **LLSketch/** : code embarqué Arduino associé au projet PLC.
 - **LLSketch_build/** : fichiers de build Arduino générés.
