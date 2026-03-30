@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<plcLibrary schemaVersion="2.11">
+	<lib version="1.0.0" name="testio" fullXml="true">
+		<descr/>
+		<globalVars/>
+		<retainVars/>
+		<constantVars/>
+		<iecVarsDeclaration/>
+		<functions/>
+		<functionBlocks/>
+		<programs>
+			<program name="testio" version="1.0.0" creationDate="1774894963" lastModifiedDate="1774895875" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="">
+				<vars/>
+				<iecDeclaration active="FALSE"/>
+				<sourceCode type="LD2">
+					<LD2 version="1">
+						<network label="" id="1" nextID="4" comment="" disabled="false" disableCondition="">
+							<assignment fromTmpVar="">
+								<input>
+									<contact name="BP1" type="Normal" id="0"/>
+								</input>
+								<outputs>
+									<coil name="LED1" type="Normal" id="1"/>
+									<coil name="L1" type="Normal" id="2"/>
+									<coil name="LR" type="Normal" id="3"/>
+								</outputs>
+							</assignment>
+						</network>
+						<network label="" id="2" nextID="2" comment="" disabled="false" disableCondition="">
+							<assignment fromTmpVar="">
+								<input>
+									<contact name="BP2" type="Normal" id="0"/>
+								</input>
+								<outputs>
+									<coil name="LED2" type="Normal" id="1"/>
+								</outputs>
+							</assignment>
+						</network>
+						<network label="" id="3" nextID="2" comment="" disabled="false" disableCondition="">
+							<assignment fromTmpVar="">
+								<input>
+									<contact name="BP3" type="Normal" id="0"/>
+								</input>
+								<outputs>
+									<coil name="LED3" type="Normal" id="1"/>
+								</outputs>
+							</assignment>
+						</network>
+						<network label="" id="4" nextID="2" comment="" disabled="false" disableCondition="">
+							<assignment fromTmpVar="">
+								<input>
+									<contact name="BP4" type="Normal" id="0"/>
+								</input>
+								<outputs>
+									<coil name="LED4" type="Normal" id="1"/>
+								</outputs>
+							</assignment>
+						</network>
+					</LD2>
+				</sourceCode>
+			</program>
+		</programs>
+		<macros/>
+		<structs/>
+		<typedefs/>
+		<enums/>
+		<subranges/>
+		<interfaces/>
+	</lib>
+</plcLibrary>

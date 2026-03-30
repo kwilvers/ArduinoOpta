@@ -1,0 +1,111 @@
+# ===========================
+# Arduino IDE
+# ===========================
+build/
+*.elf
+*.hex
+*.bin
+*.map
+*.eep
+
+# Cache Arduino IDE 2.x
+.arduino15/
+.cache/
+
+# Fichiers temporaires sketch
+*.bak
+*.tmp
+*~
+
+# ===========================
+# Arduino PLC IDE (Opta)
+# ===========================
+
+# Fichiers de build PLC
+*.a90
+*.o90
+*.s19
+*.dbg
+
+# Fichiers de projet locaux (chemins absolus machine)
+*.plcusr
+*.plcprj.user
+
+# Runtime téléchargé (spécifique à chaque machine)
+LLSketch/
+LLSketch_build/
+LLSketch.ino
+
+# Dossiers de sortie PLC IDE
+output/
+Release/
+Debug/
+
+# ===========================
+# Licences & credentials
+# ===========================
+
+# Fichier de licence Arduino (lié au hardware, non partageable)
+*.lic
+license.dat
+
+# Clés WiFi / credentials réseau
+secrets.h
+arduino_secrets.h
+*_secrets.h
+
+# ===========================
+# Système d'exploitation
+# ===========================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
+
+# ===========================
+# Éditeurs & IDEs
+# ===========================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ===========================
+# Divers
+# ===========================
+
+# Logs
+*.log
+logs/
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Dossier de dépendances locales
+lib/local/
