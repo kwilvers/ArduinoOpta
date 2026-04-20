@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <plcProject caseSensitive="false" extendedIdNames="false" useCustomWorkspace="true" debugMode="false" extcheck="true" SFCControl="false" strictPointerCheck="true" verboseWarningMode="false" iecTypeConversionRules="false" PNContactsOnEachNetwork="false" LocalVarsFBAccess="false" strictEnumsCheck="true" copyWarningThreshold="200" version="2.11" useLD2="true" useXPLCFiles="false" useFBMethods="false" customSortOfProjectTree="false" autoDerefPointers="false">
-	<image>R2D10.imgx</image>
-	<commSettings>Modbus:247,1000,M#COM:23,38400,N,8,1,H</commSettings>
+	<image>R2D7.imgx</image>
+	<commSettings>Modbus:247,1000,M#COM:29,38400,N,8,1,H</commSettings>
 	<sources>
 		<main>
 			<resources>
@@ -69,9 +69,6 @@
 				</group>
 				<group name="I_O_mappings_LEDOut" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="" version="1.0.0">
 					<var name="L" type="BOOL"/>
-					<var name="L1" type="BOOL">
-						<address type="Q" typeVar="X" index="1" subIndex="0"/>
-					</var>
 					<var name="L2" type="BOOL">
 						<address type="Q" typeVar="X" index="1" subIndex="1"/>
 					</var>
@@ -89,6 +86,9 @@
 					</var>
 					<var name="LB" type="BOOL">
 						<address type="Q" typeVar="X" index="1" subIndex="6"/>
+					</var>
+					<var name="L1" type="BOOL">
+						<address type="Q" typeVar="X" index="1" subIndex="0"/>
 					</var>
 				</group>
 			</globalVars>
@@ -178,7 +178,7 @@ cnt := cnt + 1;
 			<subranges/>
 			<interfaces/>
 		</main>
-		<target id="ArduinoOpta_1p2" name="R2D10.tgt" fullXml="false">
+		<target id="ArduinoOpta_1p2" name="R2D7.tgt" fullXml="false">
 			<![CDATA[(************************************************************************)
 (*                                                                      *)
 (*	Description: Definition of target variables and functions           *)
@@ -335,7 +335,7 @@ END_FUNCTION
 
 ]]>
 		</target>
-		<targetXML name="R2D10.tgtx" fullXml="true">
+		<targetXML name="R2D7.tgtx" fullXml="true">
 			<target>
 				<resources>
 					<resource name="ArduinoOpta" processor="ARMThumb2_VFP2">
@@ -5807,15 +5807,15 @@ END_PROGRAM
 			</src>
 		</aux>
 		<workspace>
-			<root name="R2D10" nextID="262">
+			<root name="R2D7" nextID="264">
 				<Pou name="main" id="1"/>
 				<GlobalVars name="Global_vars" id="2"/>
-				<folder id="9" name="testio">
-					<Pou name="testio" id="12"/>
+				<folder id="5" name="testio">
+					<Pou name="testio" id="8"/>
 				</folder>
-				<GlobalVars name="I_O_mappings_ProgInp" id="14"/>
-				<GlobalVars name="I_O_mappings_RelayOut" id="59"/>
-				<GlobalVars name="I_O_mappings_LEDOut" id="106"/>
+				<GlobalVars name="I_O_mappings_ProgInp" id="10"/>
+				<GlobalVars name="I_O_mappings_RelayOut" id="55"/>
+				<GlobalVars name="I_O_mappings_LEDOut" id="102"/>
 			</root>
 		</workspace>
 	</sources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <plcProject caseSensitive="false" extendedIdNames="false" useCustomWorkspace="true" debugMode="false" extcheck="true" SFCControl="false" strictPointerCheck="true" verboseWarningMode="false" iecTypeConversionRules="false" PNContactsOnEachNetwork="false" LocalVarsFBAccess="false" strictEnumsCheck="true" copyWarningThreshold="200" version="2.11" useLD2="true" useXPLCFiles="false" useFBMethods="false" customSortOfProjectTree="false" autoDerefPointers="false">
-	<image>R2D10.imgx</image>
-	<commSettings>Modbus:247,1000,M#COM:23,38400,N,8,1,H</commSettings>
+	<image>R2D9.imgx</image>
+	<commSettings>Modbus:247,1000,M#COM:20,38400,N,8,1,H</commSettings>
 	<sources>
 		<main>
 			<resources>
@@ -26,6 +26,20 @@
 			<globalVars>
 				<group name="Global_vars" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="" version="1.0.0">
 					<var name="cnt" type="INT"/>
+				</group>
+				<group name="I_O_mappings_RelayOut" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="" version="1.0.0">
+					<var name="LED1" type="BOOL">
+						<address type="Q" typeVar="X" index="0" subIndex="0"/>
+					</var>
+					<var name="LED2" type="BOOL">
+						<address type="Q" typeVar="X" index="0" subIndex="1"/>
+					</var>
+					<var name="LED3" type="BOOL">
+						<address type="Q" typeVar="X" index="0" subIndex="2"/>
+					</var>
+					<var name="LED4" type="BOOL">
+						<address type="Q" typeVar="X" index="0" subIndex="3"/>
+					</var>
 				</group>
 				<group name="I_O_mappings_ProgInp" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="" version="1.0.0">
 					<var name="BT1" type="BOOL">
@@ -53,42 +67,12 @@
 						<address type="I" typeVar="W" index="0" subIndex="7"/>
 					</var>
 				</group>
-				<group name="I_O_mappings_RelayOut" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="" version="1.0.0">
-					<var name="LED1" type="BOOL">
-						<address type="Q" typeVar="X" index="0" subIndex="0"/>
-					</var>
-					<var name="LED2" type="BOOL">
-						<address type="Q" typeVar="X" index="0" subIndex="1"/>
-					</var>
-					<var name="LED3" type="BOOL">
-						<address type="Q" typeVar="X" index="0" subIndex="2"/>
-					</var>
-					<var name="LED4" type="BOOL">
-						<address type="Q" typeVar="X" index="0" subIndex="3"/>
-					</var>
-				</group>
 				<group name="I_O_mappings_LEDOut" excludeFromBuild="FALSE" excludeFromBuildIfNotDef="" version="1.0.0">
-					<var name="L" type="BOOL"/>
 					<var name="L1" type="BOOL">
 						<address type="Q" typeVar="X" index="1" subIndex="0"/>
 					</var>
-					<var name="L2" type="BOOL">
-						<address type="Q" typeVar="X" index="1" subIndex="1"/>
-					</var>
-					<var name="L3" type="BOOL">
-						<address type="Q" typeVar="X" index="1" subIndex="2"/>
-					</var>
-					<var name="L4" type="BOOL">
-						<address type="Q" typeVar="X" index="1" subIndex="3"/>
-					</var>
 					<var name="LR" type="BOOL">
 						<address type="Q" typeVar="X" index="1" subIndex="4"/>
-					</var>
-					<var name="LG" type="BOOL">
-						<address type="Q" typeVar="X" index="1" subIndex="5"/>
-					</var>
-					<var name="LB" type="BOOL">
-						<address type="Q" typeVar="X" index="1" subIndex="6"/>
 					</var>
 				</group>
 			</globalVars>
@@ -98,10 +82,10 @@
 				<group name="Global_vars">
 					<iecDeclaration active="FALSE"/>
 				</group>
-				<group name="I_O_mappings_ProgInp">
+				<group name="I_O_mappings_RelayOut">
 					<iecDeclaration active="FALSE"/>
 				</group>
-				<group name="I_O_mappings_RelayOut">
+				<group name="I_O_mappings_ProgInp">
 					<iecDeclaration active="FALSE"/>
 				</group>
 				<group name="I_O_mappings_LEDOut">
@@ -178,7 +162,7 @@ cnt := cnt + 1;
 			<subranges/>
 			<interfaces/>
 		</main>
-		<target id="ArduinoOpta_1p2" name="R2D10.tgt" fullXml="false">
+		<target id="ArduinoOpta_1p2" name="R2D9.tgt" fullXml="false">
 			<![CDATA[(************************************************************************)
 (*                                                                      *)
 (*	Description: Definition of target variables and functions           *)
@@ -335,7 +319,7 @@ END_FUNCTION
 
 ]]>
 		</target>
-		<targetXML name="R2D10.tgtx" fullXml="true">
+		<targetXML name="R2D9.tgtx" fullXml="true">
 			<target>
 				<resources>
 					<resource name="ArduinoOpta" processor="ARMThumb2_VFP2">
@@ -5807,15 +5791,13 @@ END_PROGRAM
 			</src>
 		</aux>
 		<workspace>
-			<root name="R2D10" nextID="262">
+			<root name="R2D9" nextID="129">
 				<Pou name="main" id="1"/>
 				<GlobalVars name="Global_vars" id="2"/>
-				<folder id="9" name="testio">
-					<Pou name="testio" id="12"/>
-				</folder>
-				<GlobalVars name="I_O_mappings_ProgInp" id="14"/>
-				<GlobalVars name="I_O_mappings_RelayOut" id="59"/>
-				<GlobalVars name="I_O_mappings_LEDOut" id="106"/>
+				<Pou name="testio" id="5"/>
+				<GlobalVars name="I_O_mappings_RelayOut" id="7"/>
+				<GlobalVars name="I_O_mappings_ProgInp" id="22"/>
+				<GlobalVars name="I_O_mappings_LEDOut" id="74"/>
 			</root>
 		</workspace>
 	</sources>
@@ -5894,22 +5876,22 @@ END_PROGRAM
 								<label>L1</label>
 							</ioMapping>
 							<ioMapping id="1">
-								<label>L2</label>
+								<label/>
 							</ioMapping>
 							<ioMapping id="2">
-								<label>L3</label>
+								<label/>
 							</ioMapping>
 							<ioMapping id="3">
-								<label>L4</label>
+								<label/>
 							</ioMapping>
 							<ioMapping id="4">
 								<label>LR</label>
 							</ioMapping>
 							<ioMapping id="5">
-								<label>LG</label>
+								<label/>
 							</ioMapping>
 							<ioMapping id="6">
-								<label>LB</label>
+								<label/>
 							</ioMapping>
 						</ioMappings_LEDOut>
 						<ioMappings_ButInp>
